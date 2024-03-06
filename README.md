@@ -1,15 +1,18 @@
-# eslint-config-ewerk
+# @ewerk/eslint-config – The all-in-one solution for linting and code formatting in frontend projects
 
 This project contains rules for a consistent clean code style for frontend projects.
-That includes rules for HTML, JavaScript, Typescript and (s)css.
+That includes rules for HTML, JavaScript, Typescript and (s)css. It is compatible for all kind of javascript based frontend projects.
 
 Following tools are used:
 
-- [eslint](https://eslint.org/)
-- [prettier](https://prettier.io/)
-- [stylelint](https://stylelint.io/)
+- [eslint](https://eslint.org/): used for JS/TS/HTML files
+- [prettier](https://prettier.io/): used for formatting HTML files
+- [stylelint](https://stylelint.io/): used for CSS/SCSS files
 
-The project is currently optimized and tested for angular projects.
+The project is currently optimized and tested for Angular projects (>= 14).
+The linting and formatting rules are very strict – maybe too strict for someone, but it is very helpful on working with large teams.
+
+The eslint rules are based on [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy).
 
 ## Getting started
 
@@ -127,7 +130,7 @@ To automate it just use a commit hook. E.g. use [husky](https://www.npmjs.com/pa
 npm run fix-code-style
 ```
 
-But that's a bit overkill. You could use [lint-staged](https://www.npmjs.com/package/lint-staged) to lint and format only files you changed:
+But that's a bit overkill especially for a large codebase. You could use [lint-staged](https://www.npmjs.com/package/lint-staged) to lint and format only files you changed:
 
 ```js
 // lint-staged.config.js
@@ -184,11 +187,6 @@ module.exports = {
     jest: true,    // 'jest' is not defined
   },
 }
-```
-
-Create and publish a new release:
-```
-$ npm run release
 ```
 
 ## Things ToDo
