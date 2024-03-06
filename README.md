@@ -1,5 +1,7 @@
 # @ewerk/eslint-config – The all-in-one solution for linting and code formatting in frontend projects
 
+[![NPM Version](https://img.shields.io/npm/v/%40ewerk%2Feslint-config?registry_uri=https%3A%2F%2Fregistry.npmjs.org)](https://www.npmjs.com/package/@ewerk/eslint-config)
+
 This project contains rules for a consistent clean code style for frontend projects.
 That includes rules for HTML, JavaScript, Typescript and (s)css. It is compatible for all kind of javascript based frontend projects.
 
