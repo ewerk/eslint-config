@@ -1,0 +1,11 @@
+{
+  "plugins": {
+  },
+  "git": {
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u"
+  },
+  "hooks": {
+    "after:bump": "npx auto-changelog -p"
+  }
+
+}
