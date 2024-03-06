@@ -12,7 +12,7 @@ Following tools are used:
 - [stylelint](https://stylelint.io/): used for CSS/SCSS files
 
 The project is currently optimized and tested for Angular projects (>= 14).
-The linting and formatting rules are very strict – maybe too strict for someone, but it is very helpful on working with large teams.
+The linting and formatting rules are very strict – maybe too strict for someone, but it is very helpful on working with large teams. The toolset and ruleset is completely modular. Take what you need.
 
 The eslint rules are based on [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy).
 
