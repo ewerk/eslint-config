@@ -1,3 +1,4 @@
+
 # @ewerk/eslint-config – The all-in-one solution for linting and code formatting in frontend projects
 
 [![NPM Version](https://img.shields.io/npm/v/%40ewerk%2Feslint-config?registry_uri=https%3A%2F%2Fregistry.npmjs.org)](https://www.npmjs.com/package/@ewerk/eslint-config)
@@ -19,26 +20,70 @@ The eslint rules are based on [eslint-config-alloy](https://github.com/AlloyTeam
 ## Getting started
 
 Install eslint, prettier, stylelint and this package:
-```
+
+```bash
 $ npm i -D eslint prettier stylelint @ewerk/eslint-config
 ```
 
-### eslint
+## Configuration
+### ESLint
+
+Note: This package now uses ESLint's new flat config format (ESLint 9+).
+Create an `eslint.config.js` file in your project root:
 
 Create an eslint config file, e.g. `.eslintrc.js`:
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-module.exports = {
-  extends: [
-    '@ewerk/eslint-config',            // basic rules
-    '@ewerk/eslint-config/typescript', // typescript specific rules
-    '@ewerk/eslint-config/angular',    // angular specific rules
-  ],
-};
+const baseConfig = require('@ewerk/eslint-config');
+const typescriptConfig = require('@ewerk/eslint-config/typescript');
+const angularConfig = require('@ewerk/eslint-config/angular');
+
+module.exports = [
+  ...baseConfig,       // basic rules for JS/TS/HTML
+  ...typescriptConfig, // typescript specific rules
+  ...angularConfig,    // angular specific rules
+];
+```
+
+**Modular usage** – pick only what you need:
+
+```js
+// eslint.config.js
+
+// Only base rules (no TypeScript)
+module.exports = require('@ewerk/eslint-config');
+
+// Base + TypeScript
+module.exports = [
+  ...require('@ewerk/eslint-config'),
+  ...require('@ewerk/eslint-config/typescript'),
+];
+
+// Full stack (base + TypeScript + Angular)
+module.exports = [
+  ...require('@ewerk/eslint-config'),
+  ...require('@ewerk/eslint-config/typescript'),
+  ...require('@ewerk/eslint-config/angular'),
+];
 ```
 
 Feel free to add your own rules or override pre-defined rules.
+
+```js
+// eslint.config.js
+
+module.exports = [
+  ...require('@ewerk/eslint-config'),
+  ...require('@ewerk/eslint-config/typescript'),
+  {
+    rules: {
+      // your custom rules
+      'no-console': 'off',
+    },
+  },
+];
+```
 
 ### prettier
 Create a prettier config file, e.g. `.prettierrc.js`:
