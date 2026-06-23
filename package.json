@@ -22,7 +22,8 @@
   "author": "Florian Symanowski <iceteabottle@gmail.com> (https://github.com/iceteabottle)",
   "license": "MIT",
   "dependencies": {
-    "typescript-eslint": "^8.61.1"
+    "typescript-eslint": "^8.61.1",
+    "eslint-plugin-vue": "^9.5.1"
   },
   "devDependencies": {
     "auto-changelog": "^2.5.0",
@@ -31,8 +32,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "release-it": "^19.0.1",
-    "stylelint": "^16.19.1",
-    "eslint-plugin-vue": "^9.5.1"
+    "stylelint": "^16.19.1"
   },
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": ">= 19",
