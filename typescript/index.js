@@ -1,5 +1,6 @@
-const tseslint = require('typescript-eslint');
+const tsEslint = require('typescript-eslint');
 const alloy = require('eslint-config-alloy');
+const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
@@ -8,17 +9,19 @@ module.exports = [
       '**/*.tsx',
     ],
     languageOptions: {
-      parser: tseslint.parser,
+      parser: tsEslint.parser,
       parserOptions: {
         project: ['./tsconfig.json'],
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
+      '@stylistic': stylistic,
+      '@typescript-eslint': tsEslint.plugin,
     },
     rules: {
       ...alloy.rules,
       ...(alloy.overrides?.[0]?.rules || {}),
+      '@stylistic/type-annotation-spacing': 'error',
       '@typescript-eslint/consistent-type-assertions': 'error',
       '@typescript-eslint/consistent-type-definitions': 'error',
       '@typescript-eslint/dot-notation': 'error',
@@ -60,7 +63,6 @@ module.exports = [
       '@typescript-eslint/no-useless-constructor': ['error'],
       '@typescript-eslint/prefer-function-type': 'error',
       '@typescript-eslint/prefer-optional-chain': 'error',
-      '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/typedef': 'error',
       '@typescript-eslint/unified-signatures': 'error',
     },
