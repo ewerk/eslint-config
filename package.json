@@ -50,7 +50,8 @@
     "stylelint": ">= 16",
     "stylelint-config-standard": ">= 38",
     "stylelint-config-standard-scss": ">= 14",
-    "stylelint-order": ">= 7"
+    "stylelint-order": ">= 7",
+    "vue-eslint-parser": ">= 9"
   },
   "peerDependenciesMeta": {
     "@angular-eslint/eslint-plugin": {
@@ -78,6 +79,9 @@
       "optional": true
     },
     "stylelint-order": {
+      "optional": true
+    },
+    "vue-eslint-parser": {
       "optional": true
     }
   }
