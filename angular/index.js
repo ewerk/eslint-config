@@ -6,7 +6,7 @@ module.exports = [
       '@angular-eslint': require('@angular-eslint/eslint-plugin'),
       'change-detection-strategy': require('eslint-plugin-change-detection-strategy'),
     },
-    rules: require('./angular/ts/rules'),
+    rules: require('./rules/ts'),
   },
   // Angular template files
   {
@@ -17,6 +17,6 @@ module.exports = [
     plugins: {
       '@angular-eslint/template': require('@angular-eslint/eslint-plugin-template'),
     },
-    rules: require('./angular/html/rules'),
+    rules: require('./rules/html'),
   },
 ];
