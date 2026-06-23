@@ -46,6 +46,7 @@
     "eslint-plugin-modules-newlines": ">= 0.0.7",
     "eslint-plugin-simple-import-sort": ">= 12",
     "eslint-plugin-unused-imports": ">= 4",
+    "eslint-plugin-vue": ">= 9",
     "stylelint": ">= 16",
     "stylelint-config-standard": ">= 38",
     "stylelint-config-standard-scss": ">= 14",
@@ -62,6 +63,9 @@
       "optional": true
     },
     "eslint-plugin-change-detection-strategy": {
+      "optional": true
+    },
+    "eslint-plugin-vue": {
       "optional": true
     },
     "stylelint": {
