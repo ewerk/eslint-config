@@ -236,8 +236,25 @@ module.exports = {
 }
 ```
 
+### ERESOLVE unable to resolve dependency tree (Vue peer dependencies)
+
+If you encounter peer dependency conflicts related to `eslint-plugin-vue` during installation, this is due to `eslint-config-alloy` having optional peer dependencies on Vue packages. Since this config is focused on Angular/TypeScript projects, you don't need the Vue packages.
+
+**Solution:** Add the following to your `package.json` to force compatible Vue package versions:
+
+```json
+{
+  "overrides": {
+    "eslint-plugin-vue": "9.28.0",
+    "vue-eslint-parser": "9.4.3"
+  }
+}
+```
+
+These packages won't be used in your Angular project but need to be at compatible versions to satisfy the dependency resolver.
+
 ## Things ToDo
 
-- [ ] Update Dependencies
+- [x] Update Dependencies
 - [ ] Improve support for non-angular projects
 - [ ] Use prettier for formatting json files
