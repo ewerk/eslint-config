@@ -1,3 +1,3 @@
-module.exports = {
-  extends: ['./base.js'],
-};
+const baseConfig = require('./base.js');
+
+module.exports = baseConfig;

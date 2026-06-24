@@ -1,13 +1,11 @@
 {
   "name": "@ewerk/eslint-config",
-  "version": "1.1.0-2",
+  "version": "1.1.0-12",
   "description": "All-in-one solution for linting and code formatting in frontend projects",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "test": "echo \"no tests yet\" && exit 1",
-    "lint": "eslint .",
-    "release": "release-it"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,65 +20,54 @@
   "author": "Florian Symanowski <iceteabottle@gmail.com> (https://github.com/iceteabottle)",
   "license": "MIT",
   "dependencies": {
-    "@angular-eslint/eslint-plugin": "^19.3.0",
-    "@angular-eslint/eslint-plugin-template": "^19.3.0",
-    "@angular-eslint/template-parser": "^19.3.0",
-    "@babel/eslint-parser": "^7.27.0",
-    "eslint-config-alloy": "^5.1.2",
-    "eslint-plugin-change-detection-strategy": "^0.1.5",
-    "eslint-plugin-html": "^8.1.2",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-modules-newlines": "^0.0.7",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "prettier-plugin-organize-attributes": "^1.0.0",
-    "stylelint-config-standard": "^38.0.0",
-    "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-order": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.31.1",
-    "@typescript-eslint/parser": "^8.31.1",
-    "typescript": "^5.8.3",
-    "eslint-plugin-vue": "^9.5.1"
+    "typescript-eslint": "^8.62.0"
   },
   "devDependencies": {
-    "auto-changelog": "^2.5.0",
-    "eslint": "^8.26.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
-    "release-it": "^19.0.1",
-    "stylelint": "^16.19.1"
+    "auto-changelog": "^2.6.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-sort-keys-fix": "^1.1.2"
   },
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": ">= 19",
     "@angular-eslint/eslint-plugin-template": ">= 19",
     "@angular-eslint/template-parser": ">= 19",
-    "@babel/eslint-parser": "7.x",
-    "@typescript-eslint/eslint-plugin": "8.x",
-    "@typescript-eslint/parser": "8.x",
-    "eslint": ">= 8.26.0",
-    "eslint-config-alloy": ">= 5.1.2",
-    "eslint-plugin-change-detection-strategy": "^0.1.5",
+    "@stylistic/eslint-plugin": ">= 5",
+    "eslint": ">= 9",
+    "eslint-config-alloy": ">= 5",
+    "eslint-plugin-change-detection-strategy": ">= 0.1",
     "eslint-plugin-html": ">= 8",
-    "eslint-plugin-import": "2.x",
-    "eslint-plugin-modules-newlines": "^0.0.7",
-    "eslint-plugin-simple-import-sort": "12.x",
-    "eslint-plugin-unused-imports": "^4.0.0",
-    "prettier-plugin-organize-attributes": ">= 1",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-modules-newlines": ">= 0.0.7",
+    "eslint-plugin-simple-import-sort": ">= 12",
+    "eslint-plugin-unused-imports": ">= 4",
     "stylelint": ">= 16",
     "stylelint-config-standard": ">= 38",
     "stylelint-config-standard-scss": ">= 14",
-    "stylelint-order": ">= 7",
-    "typescript": ">= 4"
+    "stylelint-order": ">= 7"
   },
   "peerDependenciesMeta": {
-    "@typescript-eslint/eslint-plugin": {
+    "@angular-eslint/eslint-plugin": {
       "optional": true
     },
-    "@typescript-eslint/parser": {
+    "@angular-eslint/eslint-plugin-template": {
       "optional": true
     },
-    "typescript": {
+    "@angular-eslint/template-parser": {
+      "optional": true
+    },
+    "eslint-plugin-change-detection-strategy": {
+      "optional": true
+    },
+    "stylelint": {
+      "optional": true
+    },
+    "stylelint-config-standard": {
+      "optional": true
+    },
+    "stylelint-config-standard-scss": {
+      "optional": true
+    },
+    "stylelint-order": {
       "optional": true
     }
   }
