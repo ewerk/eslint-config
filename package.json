@@ -4,10 +4,8 @@
   "description": "All-in-one solution for linting and code formatting in frontend projects",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "test": "echo \"no tests yet\" && exit 1",
-    "lint": "eslint .",
-    "release": "release-it"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -27,11 +25,7 @@
   "devDependencies": {
     "auto-changelog": "^2.6.0",
     "eslint": "^9.39.4",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.8",
-    "release-it": "^20.2.0",
-    "stylelint": "^17.13.0"
+    "eslint-plugin-sort-keys-fix": "^1.1.2"
   },
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": ">= 19",
